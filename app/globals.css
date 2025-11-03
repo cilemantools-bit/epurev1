@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-light;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-normal;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-ipure-blue-dark text-white rounded-sm hover:bg-ipure-blue transition-colors duration-300 font-medium tracking-wide;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-ipure-blue-dark text-ipure-blue-dark rounded-sm hover:bg-ipure-blue-dark hover:text-white transition-all duration-300 font-medium tracking-wide;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-ipure-blue-dark to-ipure-green-dark bg-clip-text text-transparent;
+  }
+}
