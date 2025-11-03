@@ -4,13 +4,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function ContactSection() {
-  const [formType, setFormType] = useState<'dossier' | 'portes-ouvertes' | 'rappel'>('dossier');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
-    date: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
@@ -27,12 +24,12 @@ export default function ContactSection() {
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', message: '', date: '' });
+      setFormData({ name: '', email: '', phone: '' });
       setSubmitStatus(null);
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -87,13 +84,13 @@ export default function ContactSection() {
             Découvrez ÉPURE
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Demandez le dossier complet, inscrivez-vous aux portes ouvertes ou prenez rendez-vous
-            pour une visite privée.
+            Laissez-nous vos coordonnées et nous vous recontacterons pour vous présenter le projet
+            et vous envoyer le dossier complet.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form Selection & Contact Info */}
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,56 +98,9 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {/* Form Type Selector */}
-            <div className="glass-effect rounded-2xl p-6">
-              <h3 className="text-xl font-bold mb-4">Je souhaite...</h3>
-              <div className="space-y-3">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setFormType('dossier')}
-                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                    formType === 'dossier'
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-500/30'
-                      : 'bg-white/10 hover:bg-white/20 text-white'
-                  }`}
-                >
-                  <div className="font-semibold">Recevoir le dossier complet</div>
-                  <div className="text-sm opacity-80 mt-1">Plans, prix et caractéristiques détaillées</div>
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setFormType('portes-ouvertes')}
-                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                    formType === 'portes-ouvertes'
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-500/30'
-                      : 'bg-white/10 hover:bg-white/20 text-white'
-                  }`}
-                >
-                  <div className="font-semibold">M'inscrire aux portes ouvertes</div>
-                  <div className="text-sm opacity-80 mt-1">Visitez les villas et rencontrez l'équipe</div>
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setFormType('rappel')}
-                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                    formType === 'rappel'
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-500/30'
-                      : 'bg-white/10 hover:bg-white/20 text-white'
-                  }`}
-                >
-                  <div className="font-semibold">Être rappelé(e)</div>
-                  <div className="text-sm opacity-80 mt-1">Un conseiller vous contactera rapidement</div>
-                </motion.button>
-              </div>
-            </div>
-
-            {/* Contact Information */}
             <div className="space-y-6">
-              <h3 className="text-xl font-bold">Informations de contact</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl font-bold">Informations de contact</h3>
+              <div className="space-y-5">
                 <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-start space-x-4"
@@ -162,8 +112,8 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold">Adresse</div>
-                    <div className="text-sm text-slate-300">Veyrier, Genève</div>
+                    <div className="font-semibold text-lg">Adresse</div>
+                    <div className="text-slate-300">Veyrier, Genève</div>
                   </div>
                 </motion.div>
                 <motion.div
@@ -176,8 +126,8 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold">Email</div>
-                    <a href="mailto:contact@epure.ch" className="text-sm text-emerald-300 hover:text-emerald-200 transition-colors">
+                    <div className="font-semibold text-lg">Email</div>
+                    <a href="mailto:contact@epure.ch" className="text-emerald-300 hover:text-emerald-200 transition-colors">
                       contact@epure.ch
                     </a>
                   </div>
@@ -192,12 +142,27 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold">Téléphone</div>
-                    <a href="tel:+41223456789" className="text-sm text-emerald-300 hover:text-emerald-200 transition-colors">
+                    <div className="font-semibold text-lg">Téléphone</div>
+                    <a href="tel:+41223456789" className="text-emerald-300 hover:text-emerald-200 transition-colors">
                       +41 22 345 67 89
                     </a>
                   </div>
                 </motion.div>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="glass-effect rounded-2xl p-6 space-y-4">
+              <h4 className="font-bold text-lg">Horaires</h4>
+              <div className="space-y-2 text-sm text-slate-300">
+                <div className="flex justify-between">
+                  <span>Lundi - Vendredi</span>
+                  <span className="text-white font-medium">9h00 - 18h00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Samedi</span>
+                  <span className="text-white font-medium">Sur rendez-vous</span>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -210,11 +175,8 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="glass-effect rounded-2xl p-8 text-slate-900"
           >
-            <h3 className="text-2xl font-bold mb-6">
-              {formType === 'dossier' && 'Demander le dossier'}
-              {formType === 'portes-ouvertes' && 'Inscription aux portes ouvertes'}
-              {formType === 'rappel' && 'Demande de rappel'}
-            </h3>
+            <h3 className="text-3xl font-bold mb-2">Demander le dossier</h3>
+            <p className="text-slate-600 mb-8">Remplissez ce formulaire et nous vous recontacterons rapidement</p>
 
             {submitStatus === 'success' ? (
               <motion.div
@@ -237,7 +199,7 @@ export default function ContactSection() {
                 <div className="text-sm mt-2">Nous vous contacterons très prochainement.</div>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold mb-2 text-slate-700">
                     Nom complet *
@@ -249,13 +211,14 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                    placeholder="Jean Dupont"
+                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all placeholder:text-slate-400"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold mb-2 text-slate-700">
-                    Email *
+                    Adresse e-mail *
                   </label>
                   <input
                     type="email"
@@ -264,62 +227,26 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                    placeholder="jean.dupont@email.com"
+                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all placeholder:text-slate-400"
                   />
                 </div>
 
-                {(formType === 'rappel' || formType === 'portes-ouvertes') && (
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold mb-2 text-slate-700">
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
-                    />
-                  </div>
-                )}
-
-                {formType === 'portes-ouvertes' && (
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-semibold mb-2 text-slate-700">
-                      Date souhaitée
-                    </label>
-                    <select
-                      id="date"
-                      name="date"
-                      value={formData.date}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
-                    >
-                      <option value="">Sélectionnez une date</option>
-                      <option value="2025-11-15">Samedi 15 novembre 2025 - 10h-17h</option>
-                      <option value="2025-11-22">Samedi 22 novembre 2025 - 10h-17h</option>
-                      <option value="2025-11-29">Samedi 29 novembre 2025 - 10h-17h</option>
-                    </select>
-                  </div>
-                )}
-
-                {formType === 'rappel' && (
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold mb-2 text-slate-700">
-                      Message (optionnel)
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
-                    />
-                  </div>
-                )}
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold mb-2 text-slate-700">
+                    Numéro de téléphone *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+41 22 123 45 67"
+                    className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all placeholder:text-slate-400"
+                  />
+                </div>
 
                 <motion.button
                   whileHover={{ scale: 1.02 }}
