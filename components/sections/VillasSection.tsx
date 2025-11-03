@@ -91,17 +91,17 @@ export default function VillasSection() {
   };
 
   return (
-    <section id="villas" className="section-padding bg-ipure-cream">
+    <section id="villas" className="section-padding bg-stone-50">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-medium tracking-wider text-ipure-blue-dark uppercase mb-2">
+          <p className="text-sm font-medium tracking-wider text-emerald-700 uppercase mb-2">
             Les Villas
           </p>
-          <h2 className="text-ipure-grey-dark mb-6">
+          <h2 className="text-slate-600-800 mb-6">
             Trois résidences d'exception
           </h2>
-          <p className="text-lg text-ipure-grey leading-relaxed">
+          <p className="text-lg text-slate-600 leading-relaxed">
             Chaque villa offre ~270 m² d'espaces de vie élégants, pensés pour
             allier confort, lumière naturelle et harmonie avec la nature.
           </p>
@@ -116,7 +116,7 @@ export default function VillasSection() {
               onClick={() => setSelectedVilla(villa)}
             >
               {/* Image Placeholder */}
-              <div className="relative h-64 bg-gradient-to-br from-ipure-wood to-ipure-wood-dark">
+              <div className="relative h-64 bg-gradient-to-br from-amber to-amber-700">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="text-white/60 text-sm">Image de la {villa.name}</p>
                 </div>
@@ -129,22 +129,22 @@ export default function VillasSection() {
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-serif text-ipure-grey-dark">
+                <h3 className="text-2xl font-serif text-slate-600-800">
                   {villa.name}
                 </h3>
 
-                <div className="space-y-2 text-sm text-ipure-grey">
+                <div className="space-y-2 text-sm text-slate-600">
                   <div className="flex justify-between">
                     <span>Surface utile:</span>
-                    <span className="font-medium text-ipure-grey-dark">{villa.surface}</span>
+                    <span className="font-medium text-slate-600-800">{villa.surface}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Chambres:</span>
-                    <span className="font-medium text-ipure-grey-dark">{villa.rooms}</span>
+                    <span className="font-medium text-slate-600-800">{villa.rooms}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Jardin privatif:</span>
-                    <span className="font-medium text-ipure-grey-dark">{villa.garden}</span>
+                    <span className="font-medium text-slate-600-800">{villa.garden}</span>
                   </div>
                 </div>
 
@@ -167,7 +167,7 @@ export default function VillasSection() {
           <div className="bg-white rounded-sm shadow-xl p-8 md:p-12">
             <div className="flex justify-between items-start mb-8">
               <div>
-                <h3 className="text-3xl font-serif text-ipure-grey-dark mb-2">
+                <h3 className="text-3xl font-serif text-slate-600-800 mb-2">
                   {selectedVilla.name}
                 </h3>
                 <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(selectedVilla.status)}`}>
@@ -176,7 +176,7 @@ export default function VillasSection() {
               </div>
               <button
                 onClick={() => setSelectedVilla(null)}
-                className="text-ipure-grey hover:text-ipure-grey-dark"
+                className="text-slate-600 hover:text-slate-600-800"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -187,36 +187,36 @@ export default function VillasSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-ipure-grey-dark">Caractéristiques</h4>
+                  <h4 className="text-xl font-semibold text-slate-600-800">Caractéristiques</h4>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <p className="text-sm text-ipure-grey">Surface utile</p>
-                      <p className="text-lg font-medium text-ipure-grey-dark">{selectedVilla.surface}</p>
+                      <p className="text-sm text-slate-600">Surface utile</p>
+                      <p className="text-lg font-medium text-slate-600-800">{selectedVilla.surface}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-ipure-grey">Chambres</p>
-                      <p className="text-lg font-medium text-ipure-grey-dark">{selectedVilla.rooms}</p>
+                      <p className="text-sm text-slate-600">Chambres</p>
+                      <p className="text-lg font-medium text-slate-600-800">{selectedVilla.rooms}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-ipure-grey">Jardin</p>
-                      <p className="text-lg font-medium text-ipure-grey-dark">{selectedVilla.garden}</p>
+                      <p className="text-sm text-slate-600">Jardin</p>
+                      <p className="text-lg font-medium text-slate-600-800">{selectedVilla.garden}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-ipure-grey">Prix</p>
-                      <p className="text-lg font-medium text-ipure-grey-dark">{selectedVilla.price}</p>
+                      <p className="text-sm text-slate-600">Prix</p>
+                      <p className="text-lg font-medium text-slate-600-800">{selectedVilla.price}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-ipure-grey-dark">Espaces & Équipements</h4>
+                  <h4 className="text-xl font-semibold text-slate-600-800">Espaces & Équipements</h4>
                   <ul className="space-y-2">
                     {selectedVilla.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <svg className="w-5 h-5 text-ipure-blue-dark mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-emerald-700 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-ipure-grey">{feature}</span>
+                        <span className="text-slate-600">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -224,7 +224,7 @@ export default function VillasSection() {
               </div>
 
               <div className="space-y-6">
-                <div className="h-96 bg-gradient-to-br from-ipure-wood to-ipure-wood-dark rounded-sm flex items-center justify-center">
+                <div className="h-96 bg-gradient-to-br from-amber to-amber-700 rounded-sm flex items-center justify-center">
                   <p className="text-white/60 text-sm">Plans & images à venir</p>
                 </div>
 

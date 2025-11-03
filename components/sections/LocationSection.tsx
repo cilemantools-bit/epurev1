@@ -9,17 +9,17 @@ export default function LocationSection() {
   ];
 
   return (
-    <section id="emplacement" className="section-padding bg-ipure-cream">
+    <section id="emplacement" className="section-padding bg-stone-50">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-medium tracking-wider text-ipure-blue-dark uppercase mb-2">
+          <p className="text-sm font-medium tracking-wider text-emerald-700 uppercase mb-2">
             Emplacement
           </p>
-          <h2 className="text-ipure-grey-dark mb-6">
+          <h2 className="text-slate-600-800 mb-6">
             Veyrier, au cœur de la vie genevoise
           </h2>
-          <p className="text-lg text-ipure-grey leading-relaxed">
+          <p className="text-lg text-slate-600 leading-relaxed">
             Un quartier résidentiel paisible et verdoyant, idéalement situé pour allier
             vie urbaine dynamique et sérénité naturelle.
           </p>
@@ -28,7 +28,7 @@ export default function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Map Placeholder */}
           <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-ipure-blue-light to-ipure-green-light rounded-sm h-[450px] flex items-center justify-center shadow-xl">
+            <div className="bg-gradient-to-br from-emerald-200 to-teal-200 rounded-sm h-[450px] flex items-center justify-center shadow-xl">
               <div className="text-center">
                 <svg className="w-16 h-16 mx-auto mb-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -42,15 +42,15 @@ export default function LocationSection() {
           {/* Location Details */}
           <div className="order-1 lg:order-2 space-y-8">
             <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-serif text-ipure-grey-dark">
+              <h3 className="text-2xl md:text-3xl font-serif text-slate-600-800">
                 Un emplacement privilégié
               </h3>
-              <p className="text-ipure-grey leading-relaxed">
-                Située dans la commune de <strong className="text-ipure-grey-dark">Veyrier</strong>,
-                à quelques minutes seulement de Genève et Carouge, IPURE bénéficie d'un cadre
+              <p className="text-slate-600 leading-relaxed">
+                Située dans la commune de <strong className="text-slate-600-800">Veyrier</strong>,
+                à quelques minutes seulement de Genève et Carouge, ÉPURE bénéficie d'un cadre
                 résidentiel calme et verdoyant, tout en restant proche de toutes les commodités.
               </p>
-              <p className="text-ipure-grey leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 Un environnement idéal pour les familles cherchant à conjuguer qualité de vie,
                 proximité urbaine et contact avec la nature.
               </p>
@@ -66,10 +66,10 @@ export default function LocationSection() {
                   <div className="flex items-center space-x-3">
                     <span className="text-3xl">{item.icon}</span>
                     <div>
-                      <h4 className="text-sm font-semibold text-ipure-grey-dark">
+                      <h4 className="text-sm font-semibold text-slate-600-800">
                         {item.name}
                       </h4>
-                      <p className="text-xs text-ipure-grey">{item.distance}</p>
+                      <p className="text-xs text-slate-600">{item.distance}</p>
                     </div>
                   </div>
                 </div>
@@ -78,39 +78,39 @@ export default function LocationSection() {
 
             {/* Highlights */}
             <div className="bg-white rounded-sm p-6 shadow-md">
-              <h4 className="text-lg font-semibold text-ipure-grey-dark mb-4">
+              <h4 className="text-lg font-semibold text-slate-600-800 mb-4">
                 Points forts du quartier
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-ipure-green-dark mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm text-ipure-grey">
+                  <span className="text-sm text-slate-600">
                     Quartier résidentiel paisible et sécurisé
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-ipure-green-dark mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm text-ipure-grey">
+                  <span className="text-sm text-slate-600">
                     Espaces verts et sentiers de promenade à proximité
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-ipure-green-dark mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm text-ipure-grey">
+                  <span className="text-sm text-slate-600">
                     Excellente desserte en transports publics
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-ipure-green-dark mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm text-ipure-grey">
+                  <span className="text-sm text-slate-600">
                     Écoles et infrastructures familiales de qualité
                   </span>
                 </li>

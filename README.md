@@ -1,15 +1,15 @@
-# IPURE - Vivre l'élégance durable
+# ÉPURE - Vivre l'élégance durable
 
-Site web officiel du projet immobilier IPURE à Veyrier, Genève.
+Site web officiel du projet immobilier ÉPURE à Veyrier, Genève.
 
 ## Description
 
-IPURE est un projet immobilier résidentiel d'exception composé de trois villas contemporaines, alliant architecture élégante, éco-responsabilité et confort haut de gamme.
+ÉPURE est un projet immobilier résidentiel d'exception composé de trois villas contemporaines, alliant architecture élégante, éco-responsabilité et confort haut de gamme.
 
 ## Caractéristiques du site
 
 - **Architecture moderne** : Conçu avec Next.js 14, React et TypeScript
-- **Design élégant** : Styled avec Tailwind CSS selon la charte graphique IPURE
+- **Design élégant** : Styled avec Tailwind CSS selon la charte graphique ÉPURE
 - **Performance optimale** : Build statique optimisé pour des temps de chargement rapides
 - **Responsive** : Adapté à tous les écrans (mobile, tablette, desktop)
 - **SEO optimisé** : Métadonnées complètes et structure sémantique
@@ -17,7 +17,7 @@ IPURE est un projet immobilier résidentiel d'exception composé de trois villas
 ## Sections du site
 
 1. **Hero** - Page d'accueil avec message principal
-2. **Le Projet** - Histoire et philosophie d'IPURE
+2. **Le Projet** - Histoire et philosophie d'ÉPURE
 3. **Les Villas** - Présentation détaillée des 3 villas (24E, 24F, 24G)
 4. **Architecture & Écologie** - Innovations architecturales et engagement environnemental
 5. **Emplacement** - Localisation à Veyrier et proximités
@@ -96,10 +96,10 @@ epurev1/
 
 ## Contact
 
-Pour plus d'informations sur le projet IPURE :
-- Email : contact@ipure.ch
+Pour plus d'informations sur le projet ÉPURE :
+- Email : contact@épure.ch
 - Téléphone : +41 22 345 67 89
 
 ---
 
-© 2025 IPURE - Tous droits réservés
+© 2025 ÉPURE - Tous droits réservés
