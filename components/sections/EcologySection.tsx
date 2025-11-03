@@ -49,7 +49,7 @@ export default function EcologySection() {
           <p className="text-sm font-medium tracking-wider text-teal-700 uppercase mb-2">
             Architecture & Écologie
           </p>
-          <h2 className="text-slate-600-800 mb-6">
+          <h2 className="text-slate-800 mb-6">
             L'élégance au service de la durabilité
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
@@ -62,7 +62,7 @@ export default function EcologySection() {
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h3 className="text-2xl md:text-3xl font-serif text-slate-600-800 mb-6">
+              <h3 className="text-2xl md:text-3xl font-serif text-slate-800 mb-6">
                 Une architecture élégante et fonctionnelle
               </h3>
               <ul className="space-y-3">
@@ -84,7 +84,7 @@ export default function EcologySection() {
 
         {/* Ecological Features Grid */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-serif text-slate-600-800 text-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-serif text-slate-800 text-center mb-12">
             Innovations écologiques
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,7 +94,7 @@ export default function EcologySection() {
                 className="bg-stone-50 rounded-sm p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h4 className="text-xl font-semibold text-slate-600-800 mb-3">
+                <h4 className="text-xl font-semibold text-slate-800 mb-3">
                   {feature.title}
                 </h4>
                 <p className="text-slate-600">
@@ -108,7 +108,7 @@ export default function EcologySection() {
         {/* Experience Section */}
         <div className="bg-gradient-to-r from-emerald-200/20 to-teal-200/20 rounded-sm p-8 md:p-12">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h3 className="text-2xl md:text-3xl font-serif text-slate-600-800">
+            <h3 className="text-2xl md:text-3xl font-serif text-slate-800">
               Une expérience de vie unique
             </h3>
             <p className="text-lg text-slate-600 leading-relaxed italic">

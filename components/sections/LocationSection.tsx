@@ -16,7 +16,7 @@ export default function LocationSection() {
           <p className="text-sm font-medium tracking-wider text-emerald-700 uppercase mb-2">
             Emplacement
           </p>
-          <h2 className="text-slate-600-800 mb-6">
+          <h2 className="text-slate-800 mb-6">
             Veyrier, au cœur de la vie genevoise
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
@@ -42,11 +42,11 @@ export default function LocationSection() {
           {/* Location Details */}
           <div className="order-1 lg:order-2 space-y-8">
             <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-serif text-slate-600-800">
+              <h3 className="text-2xl md:text-3xl font-serif text-slate-800">
                 Un emplacement privilégié
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                Située dans la commune de <strong className="text-slate-600-800">Veyrier</strong>,
+                Située dans la commune de <strong className="text-slate-800">Veyrier</strong>,
                 à quelques minutes seulement de Genève et Carouge, ÉPURE bénéficie d'un cadre
                 résidentiel calme et verdoyant, tout en restant proche de toutes les commodités.
               </p>
@@ -66,7 +66,7 @@ export default function LocationSection() {
                   <div className="flex items-center space-x-3">
                     <span className="text-3xl">{item.icon}</span>
                     <div>
-                      <h4 className="text-sm font-semibold text-slate-600-800">
+                      <h4 className="text-sm font-semibold text-slate-800">
                         {item.name}
                       </h4>
                       <p className="text-xs text-slate-600">{item.distance}</p>
@@ -78,7 +78,7 @@ export default function LocationSection() {
 
             {/* Highlights */}
             <div className="bg-white rounded-sm p-6 shadow-md">
-              <h4 className="text-lg font-semibold text-slate-600-800 mb-4">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4">
                 Points forts du quartier
               </h4>
               <ul className="space-y-3">

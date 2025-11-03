@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -37,46 +36,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-      {/* Animated Background Orbs */}
-      <div className="absolute inset-0 opacity-30">
-        <motion.div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            x: [0, -50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      </div>
-
-      <div className="container-custom relative z-10">
+    <section id="contact" className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <div className="container-custom">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block glass-effect px-4 py-1.5 rounded-full text-sm font-medium text-emerald-300 mb-4">
             Contact
           </div>
@@ -87,24 +50,15 @@ export default function ContactSection() {
             Laissez-nous vos coordonnées et nous vous recontacterons pour vous présenter le projet
             et vous envoyer le dossier complet.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Informations de contact</h3>
               <div className="space-y-5">
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-start space-x-4"
-                >
+                <div className="flex items-start space-x-4 hover:translate-x-2 transition-transform">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -115,11 +69,8 @@ export default function ContactSection() {
                     <div className="font-semibold text-lg">Adresse</div>
                     <div className="text-slate-300">Veyrier, Genève</div>
                   </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-start space-x-4"
-                >
+                </div>
+                <div className="flex items-start space-x-4 hover:translate-x-2 transition-transform">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -131,11 +82,8 @@ export default function ContactSection() {
                       contact@epure.ch
                     </a>
                   </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-start space-x-4"
-                >
+                </div>
+                <div className="flex items-start space-x-4 hover:translate-x-2 transition-transform">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -147,7 +95,7 @@ export default function ContactSection() {
                       +41 22 345 67 89
                     </a>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
 
@@ -165,39 +113,21 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="glass-effect rounded-2xl p-8 text-slate-900"
-          >
+          <div className="glass-effect rounded-2xl p-8 text-slate-900">
             <h3 className="text-3xl font-bold mb-2">Demander le dossier</h3>
             <p className="text-slate-600 mb-8">Remplissez ce formulaire et nous vous recontacterons rapidement</p>
 
             {submitStatus === 'success' ? (
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className="bg-emerald-100 text-emerald-800 p-8 rounded-xl text-center"
-              >
-                <motion.svg
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-                  className="w-16 h-16 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+              <div className="bg-emerald-100 text-emerald-800 p-8 rounded-xl text-center">
+                <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </motion.svg>
+                </svg>
                 <div className="font-bold text-lg">Merci pour votre demande !</div>
                 <div className="text-sm mt-2">Nous vous contacterons très prochainement.</div>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -248,22 +178,20 @@ export default function ContactSection() {
                   />
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed text-lg py-4"
+                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed text-lg py-4 hover:scale-105 transition-transform"
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
-                </motion.button>
+                </button>
 
                 <p className="text-xs text-slate-500 text-center">
                   Vos données sont traitées de manière confidentielle et ne seront pas partagées.
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ProjectSection() {
   return (
     <section id="projet" className="section-padding bg-white">
@@ -9,7 +11,7 @@ export default function ProjectSection() {
               <p className="text-sm font-medium tracking-wider text-emerald-700 uppercase">
                 Le Projet
               </p>
-              <h2 className="text-slate-600-800">
+              <h2 className="text-slate-800">
                 Une vision personnelle de l'habitat
               </h2>
             </div>
@@ -21,14 +23,14 @@ export default function ProjectSection() {
               </p>
 
               <p>
-                Ce projet unique à <strong className="text-slate-600-800">Veyrier, Genève</strong>,
+                Ce projet unique à <strong className="text-slate-800">Veyrier, Genève</strong>,
                 est né d'une démarche rare : celle d'un propriétaire genevois ayant choisi de
                 remplacer une maison ancienne par un lieu de vie exemplaire, pensé comme s'il
                 l'avait conçu pour lui-même.
               </p>
 
               <p>
-                Tout a été imaginé dans une logique de <strong className="text-slate-600-800">soin,
+                Tout a été imaginé dans une logique de <strong className="text-slate-800">soin,
                 de justesse et de pérennité</strong>. Ce n'est pas une promotion immobilière,
                 mais une philosophie de l'habitat.
               </p>
@@ -43,7 +45,7 @@ export default function ProjectSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-600-800">3 villas uniquement</h4>
+                  <h4 className="text-sm font-semibold text-slate-800">3 villas uniquement</h4>
                   <p className="text-sm text-slate-600">À échelle humaine</p>
                 </div>
               </div>
@@ -55,7 +57,7 @@ export default function ProjectSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-600-800">Permis en force</h4>
+                  <h4 className="text-sm font-semibold text-slate-800">Permis en force</h4>
                   <p className="text-sm text-slate-600">Prêt à démarrer</p>
                 </div>
               </div>
@@ -67,7 +69,7 @@ export default function ProjectSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-600-800">Conçu avec soin</h4>
+                  <h4 className="text-sm font-semibold text-slate-800">Conçu avec soin</h4>
                   <p className="text-sm text-slate-600">Pensé pour durer</p>
                 </div>
               </div>
@@ -79,19 +81,22 @@ export default function ProjectSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-600-800">Engagement écologique</h4>
+                  <h4 className="text-sm font-semibold text-slate-800">Engagement écologique</h4>
                   <p className="text-sm text-slate-600">Minergie P/THPE</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Image Placeholder */}
-          <div className="relative h-[500px] lg:h-[600px] rounded-sm overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-700 to-amber opacity-80" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white/60 text-sm">Image du projet à venir</p>
-            </div>
+          {/* Image */}
+          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2340&auto=format&fit=crop"
+              alt="Architecture moderne"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>
